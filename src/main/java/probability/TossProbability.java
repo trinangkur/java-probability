@@ -2,7 +2,7 @@ package probability;
 
 public class TossProbability {
     private final int numOfCoins;
-    
+    static private final float MAX_PROBABILITY = 1.0F;
     public TossProbability(int numOfCoins) {
         this.numOfCoins = numOfCoins;
     }
@@ -13,6 +13,6 @@ public class TossProbability {
     }
 
     public float notGettingAllTails() {
-        return 1 - this.gettingAllTails();
+        return MAX_PROBABILITY - this.gettingAllTails();
     }
 }
